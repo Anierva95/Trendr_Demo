@@ -5,7 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     Banner: {
-      flexGrow: 1,
+      fontSize: "4rem",
+      textAlign: "center",
+      marginTop: "1em",
+      marginBottom: "1em",
     }
   }));
 
@@ -15,7 +18,7 @@ export default function Banner(props) {
 
     return(
       <Typography variant="h1" gutterBottom className={classes.Banner}>
-      Your product's trends can be hard to follow, <strong>Let us help.</strong>
+      Your product playbook, <strong>right at your fingertips.</strong>
       </Typography>
       );
 }
