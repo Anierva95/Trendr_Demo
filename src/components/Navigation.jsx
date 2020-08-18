@@ -27,12 +27,13 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            Trendr by AI Consult
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button variant="contained" color="primary">How it works</Button>
+          <Button variant="contained" color="primary">Pricing</Button>
+          <Button variant="contained" color="secondary">Demo</Button>
         </Toolbar>
       </AppBar>
     </div>

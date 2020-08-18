@@ -17,7 +17,7 @@ export default function Banner(props) {
     const classes = useStyles();
 
     return(
-      <Typography variant="h1" gutterBottom className={classes.Banner}>
+      <Typography variant="h1" className={classes.Banner}>
       Your product playbook, <strong>right at your fingertips.</strong>
       </Typography>
       );
