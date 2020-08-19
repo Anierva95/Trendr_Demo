@@ -12,7 +12,7 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   girlImage: {
-    height: "40rem",
+    height: "50rem",
   },
 }));
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <Banner />
+      {/* <Banner /> */}
       <Grid justify="center" container direction="row">
         <Grid container item xs={4} direction="column" justify="center">
           <BannerCTA />
@@ -31,25 +31,36 @@ function App() {
           </Button>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={7}>
           <img className={classes.girlImage} src={girlPicture}></img>
         </Grid>
       </Grid>
 
       <Typography variant="h2" align="center">
-        Using Trendr is simple:
+        Using Trendr is <strong>simple:</strong>
       </Typography>
-      <Grid justify="center" container direction="row">
-        <Grid container item xs={4} direction="column" justify="center">
-          <BannerCTA />
-          <Button size="large" variant="contained" color="secondary">
-            Demo
-          </Button>
-        </Grid>
 
-        <Grid item xs={6}>
-          <img className={classes.girlImage} src={girlPicture}></img>
-        </Grid>
+      <Grid justify="space-around" container direction="row">
+        <Grid item>
+
+        <Typography variant="h6" align="center">
+        Step 1
+      </Typography>
+          
+          </Grid>
+
+        <Grid item>
+
+        <Typography variant="h6" align="center">
+        Step 2
+      </Typography>
+          </Grid>
+        <Grid item>
+
+        <Typography variant="h6" align="center">
+        Step 3
+      </Typography>
+          </Grid>
       </Grid>
     </div>
   );
