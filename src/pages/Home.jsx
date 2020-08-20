@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     background: {
       background: "linear-gradient(-90deg,#02203c,#001528)",
     },
+    icon: {
+        fontSize: "5rem",
+    }
   }));
   
 export default function Home() {
@@ -54,11 +57,11 @@ export default function Home() {
   
           <Grid justify="space-around" container direction="row">
             <Grid item xs={3}>
-              <Typography color="textPrimary" variant="h5" align="center">
-                Step 1: Import your CSV
+              <Typography gutterBottom color="textPrimary" variant="h5" align="center">
+                Import your CSV
               </Typography>
               <Typography color="textPrimary" align="center">
-                <ImportExportIcon />
+                <ImportExportIcon gutterBottom className={classes.icon} />
               </Typography>
               <Typography color="textPrimary" variant="body1" align="center">
                 When you are creating a website that is going to be using dynamic
@@ -75,11 +78,11 @@ export default function Home() {
             </Grid>
   
             <Grid item xs={3}>
-              <Typography color="textPrimary" variant="h5" align="center">
-                Step 2: Let our model do the work
+              <Typography gutterBottom color="textPrimary" variant="h5" align="center">
+                Our model goes to work!
               </Typography>
               <Typography color="textPrimary" align="center">
-                <AdbIcon />
+                <AdbIcon gutterBottom className={classes.icon} />
               </Typography>
   
               <Typography color="textPrimary" variant="body1" align="center">
@@ -96,11 +99,11 @@ export default function Home() {
               </Typography>
             </Grid>
             <Grid item xs={3}>
-              <Typography color="textPrimary" variant="h5" align="center">
-                Step 3: Get informed!
+              <Typography gutterBottom color="textPrimary" variant="h5"  align="center">
+                Get informed!
               </Typography>
               <Typography color="textPrimary" align="center">
-                <AssessmentIcon />
+                <AssessmentIcon gutterBottom className={classes.icon} />
               </Typography>
               <Typography color="textPrimary" variant="body1" align="center">
                 When you are creating a website that is going to be using dynamic
