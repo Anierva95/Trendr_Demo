@@ -9,17 +9,16 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import { ThemeProvider } from '@material-ui/styles';
+import { ThemeProvider } from "@material-ui/styles";
 import theme from "./components/theme";
-
 
 const useStyles = makeStyles((theme) => ({
   girlImage: {
     height: "50rem",
   },
   background: {
-    background: "linear-gradient(-90deg,#02203c,#001528)"
-  }
+    background: "linear-gradient(-90deg,#02203c,#001528)",
+  },
 }));
 
 function App() {
@@ -27,50 +26,45 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className={classes.background}>
-      <Navigation />
-      {/* <Banner /> */}
-      <Grid justify="center" container direction="row">
-        <Grid container item xs={4} direction="column" justify="center">
-          <BannerCTA />
-          <Button variant="contained" color="secondary">
-            Demo
-          </Button>
+      <div className={classes.background}>
+        <Navigation />
+        {/* <Banner /> */}
+        <Grid justify="center" container direction="row">
+          <Grid container item xs={4} direction="column" justify="center">
+            <BannerCTA />
+            <Button variant="contained" color="secondary">
+              Demo
+            </Button>
+          </Grid>
+
+          <Grid item xs={7}>
+            <img className={classes.girlImage} src={girlPicture}></img>
+          </Grid>
         </Grid>
-        
 
-        <Grid item xs={7}>
-          <img className={classes.girlImage} src={girlPicture}></img>
+        <Typography color="textPrimary" variant="h2" align="center">
+          Using Trendr is <strong>simple:</strong>
+        </Typography>
+
+        <Grid justify="space-around" container direction="row">
+          <Grid item>
+            <Typography color="textPrimary" variant="h6" align="center">
+              Step 1
+            </Typography>
+          </Grid>
+
+          <Grid item>
+            <Typography color="textPrimary" variant="h6" align="center">
+              Step 2
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography color="textPrimary" variant="h6" align="center">
+              Step 3
+            </Typography>
+          </Grid>
         </Grid>
-      </Grid>
-
-      <Typography color="textPrimary"  variant="h2" align="center">
-        Using Trendr is <strong>simple:</strong>
-      </Typography>
-
-      <Grid justify="space-around" container direction="row">
-        <Grid item>
-
-        <Typography color="textPrimary"  variant="h6" align="center">
-        Step 1
-      </Typography>
-          
-          </Grid>
-
-        <Grid item>
-
-        <Typography color="textPrimary" variant="h6" align="center">
-        Step 2
-      </Typography>
-          </Grid>
-        <Grid item>
-
-        <Typography color="textPrimary"  variant="h6" align="center">
-        Step 3
-      </Typography>
-          </Grid>
-      </Grid>
-    </div>
+      </div>
     </ThemeProvider>
   );
 }
