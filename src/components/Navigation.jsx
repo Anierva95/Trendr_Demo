@@ -53,7 +53,7 @@ export default function ButtonAppBar() {
             <Tabs>
               <Tab
                 className={classes.Tab}
-                label="How it works"
+                label="Home"
                 {...a11yProps(0)}
               ></Tab>
               <Tab
