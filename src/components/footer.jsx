@@ -43,8 +43,11 @@ export default function Footer(props) {
           Contact
         </Typography>
         </Grid>
-        <Typography align="center" variant="body1">
+        <Typography gutterBottom align="center" variant="body1">
           &#169; 2020 AI Consult All rights reserved.{" "}
+        </Typography>
+        <Typography gutterBottom align="center" variant="body1">
+          <a href="#">Privacy</a> | <a href="#">Terms</a>
         </Typography>
         <Typography align="center">
           <LinkedInIcon className={classes.footerIcon} />

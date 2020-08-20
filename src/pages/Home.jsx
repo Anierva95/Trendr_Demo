@@ -22,6 +22,14 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
         fontSize: "5rem",
+    },
+    stepBox: {
+        border: "1px solid white",
+        marginBottom: "7em",
+        padding: "1.5em"
+    },
+    stepBanner: {
+        marginBottom: "1em"
     }
   }));
   
@@ -51,12 +59,13 @@ export default function Home() {
             color="textPrimary"
             variant="h2"
             align="center"
+            className={classes.stepBanner}
           >
-            Using Trendr is <strong>simple:</strong>
+            Using Trendr is <u><strong>simple</strong></u>
           </Typography>
   
           <Grid justify="space-around" container direction="row">
-            <Grid item xs={3}>
+            <Grid item className={classes.stepBox} xs={3}>
               <Typography gutterBottom color="textPrimary" variant="h4" align="center">
                 Import your CSV
               </Typography>
@@ -69,15 +78,11 @@ export default function Home() {
                 to what that content is yet…what do you do? You fake it. You put
                 in dummy text, and dummy images. Microsoft Word has the feature of
                 using “=rand(10,10)” to generate random content, but that doesn’t
-                help me in my code editor. The focus is on the design, not the
-                content. But running your fingers around on the keyboard for
-                random text is kind of a waste of time and it doesn’t really yield
-                result that shows “for placement only” type look. Besides, you
-                need tags in there to get what you really wanted.
+                help me in my code editor.
               </Typography>
             </Grid>
   
-            <Grid item xs={3}>
+            <Grid className={classes.stepBox} item xs={3}>
               <Typography gutterBottom color="textPrimary" variant="h4" align="center">
                 Our model predicts
               </Typography>
@@ -91,14 +96,10 @@ export default function Home() {
                 to what that content is yet…what do you do? You fake it. You put
                 in dummy text, and dummy images. Microsoft Word has the feature of
                 using “=rand(10,10)” to generate random content, but that doesn’t
-                help me in my code editor. The focus is on the design, not the
-                content. But running your fingers around on the keyboard for
-                random text is kind of a waste of time and it doesn’t really yield
-                result that shows “for placement only” type look. Besides, you
-                need tags in there to get what you really wanted.
+                help me in my code editor. 
               </Typography>
             </Grid>
-            <Grid item xs={3}>
+            <Grid className={classes.stepBox} item xs={3}>
               <Typography gutterBottom color="textPrimary" variant="h4"  align="center">
                 Get informed!
               </Typography>
@@ -111,11 +112,7 @@ export default function Home() {
                 to what that content is yet…what do you do? You fake it. You put
                 in dummy text, and dummy images. Microsoft Word has the feature of
                 using “=rand(10,10)” to generate random content, but that doesn’t
-                help me in my code editor. The focus is on the design, not the
-                content. But running your fingers around on the keyboard for
-                random text is kind of a waste of time and it doesn’t really yield
-                result that shows “for placement only” type look. Besides, you
-                need tags in there to get what you really wanted.
+                help me in my code editor.
               </Typography>
             </Grid>
           </Grid>
