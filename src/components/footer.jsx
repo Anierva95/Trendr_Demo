@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     background: "white",
     paddingTop: "2em",
-    position: "absolute",
     bottom: "0",
   },
 }));

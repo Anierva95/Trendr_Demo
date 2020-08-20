@@ -26,6 +26,7 @@ export default function Home() {
     const classes = useStyles();
   
     return (
+        <>
         <div className={classes.background}>
           <Navigation />
           {/* <Banner /> */}
@@ -115,8 +116,8 @@ export default function Home() {
               </Typography>
             </Grid>
           </Grid>
-  
-          <Footer/>
         </div>
+         <Footer/>
+         </>
     );
   }

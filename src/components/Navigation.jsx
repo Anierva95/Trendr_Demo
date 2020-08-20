@@ -52,6 +52,9 @@ export default function ButtonAppBar() {
 
             <Tabs>
               <Tab
+                component={Link}
+                to="/"
+                textColor="primary"
                 className={classes.Tab}
                 label="Home"
                 {...a11yProps(0)}
@@ -61,8 +64,8 @@ export default function ButtonAppBar() {
                 label="Pricing"
                 {...a11yProps(1)}
               ></Tab>
-            </Tabs>
-            <Button
+              <Button
+              size="large"
               variant="contained"
               color="secondary"
               className={classes.Tab}
@@ -72,6 +75,7 @@ export default function ButtonAppBar() {
             >
               Demo
             </Button>
+            </Tabs>
           </Toolbar>
         </Grid>
       </AppBar>

@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
       background: "linear-gradient(-90deg,#02203c,#001528)",
       height: "100vh",
     },
+    EmptySpace: {
+        height: "80vh"
+    }
   }));
 
 export default function Demo(props) {
@@ -28,6 +31,9 @@ const classes = useStyles();
             <Typography color="textPrimary" align="center" >
         <h1> Coming Soon! </h1>
         </Typography>
+        <div className={classes.EmptySpace}>
+
+        </div>
         <Footer/>
 
         </div>
