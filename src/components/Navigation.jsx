@@ -37,7 +37,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" color="transparent" elevation={0} >
       <Grid container direction="row" justify="center">
         <Toolbar justify="center" >
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">

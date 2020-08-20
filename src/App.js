@@ -26,10 +26,11 @@ function App() {
       <Grid justify="center" container direction="row">
         <Grid container item xs={4} direction="column" justify="center">
           <BannerCTA />
-          <Button size="large" variant="contained" color="secondary">
+          <Button variant="contained" color="secondary">
             Demo
           </Button>
         </Grid>
+        
 
         <Grid item xs={7}>
           <img className={classes.girlImage} src={girlPicture}></img>
