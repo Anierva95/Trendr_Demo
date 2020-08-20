@@ -44,14 +44,14 @@ function App() {
         </Grid>
       </Grid>
 
-      <Typography variant="h2" align="center">
+      <Typography color="textPrimary"  variant="h2" align="center">
         Using Trendr is <strong>simple:</strong>
       </Typography>
 
       <Grid justify="space-around" container direction="row">
         <Grid item>
 
-        <Typography variant="h6" align="center">
+        <Typography color="textPrimary"  variant="h6" align="center">
         Step 1
       </Typography>
           
@@ -59,13 +59,13 @@ function App() {
 
         <Grid item>
 
-        <Typography variant="h6" align="center">
+        <Typography color="textPrimary" variant="h6" align="center">
         Step 2
       </Typography>
           </Grid>
         <Grid item>
 
-        <Typography variant="h6" align="center">
+        <Typography color="textPrimary"  variant="h6" align="center">
         Step 3
       </Typography>
           </Grid>
