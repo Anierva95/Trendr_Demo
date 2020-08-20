@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import Banner from "./components/Banner";
 import BannerCTA from "./components/BannerCTA";
 import girlPicture from "./Assets/girlPicture.svg";
+import Footer from './components/footer';
 
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -118,6 +119,8 @@ function App() {
             </Typography>
           </Grid>
         </Grid>
+
+        <Footer/>
       </div>
     </ThemeProvider>
   );
