@@ -9,18 +9,25 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import { ThemeProvider } from '@material-ui/styles';
+import theme from "./components/theme";
+
 
 const useStyles = makeStyles((theme) => ({
   girlImage: {
     height: "50rem",
   },
+  background: {
+    background: "linear-gradient(-90deg,#02203c,#001528)"
+  }
 }));
 
 function App() {
   const classes = useStyles();
 
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
+    <div className={classes.background}>
       <Navigation />
       {/* <Banner /> */}
       <Grid justify="center" container direction="row">
@@ -64,6 +71,7 @@ function App() {
           </Grid>
       </Grid>
     </div>
+    </ThemeProvider>
   );
 }
 
