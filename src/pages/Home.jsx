@@ -57,13 +57,13 @@ export default function Home() {
   
           <Grid justify="space-around" container direction="row">
             <Grid item xs={3}>
-              <Typography gutterBottom color="textPrimary" variant="h5" align="center">
+              <Typography gutterBottom color="textPrimary" variant="h4" align="center">
                 Import your CSV
               </Typography>
               <Typography color="textPrimary" align="center">
                 <ImportExportIcon gutterBottom className={classes.icon} />
               </Typography>
-              <Typography color="textPrimary" variant="body1" align="center">
+              <Typography gutterBottom color="textPrimary" variant="body1" align="center">
                 When you are creating a website that is going to be using dynamic
                 content (or just creating a demo), and you don’t quite have access
                 to what that content is yet…what do you do? You fake it. You put
@@ -78,14 +78,14 @@ export default function Home() {
             </Grid>
   
             <Grid item xs={3}>
-              <Typography gutterBottom color="textPrimary" variant="h5" align="center">
-                Our model goes to work!
+              <Typography gutterBottom color="textPrimary" variant="h4" align="center">
+                Our model predicts
               </Typography>
               <Typography color="textPrimary" align="center">
                 <AdbIcon gutterBottom className={classes.icon} />
               </Typography>
   
-              <Typography color="textPrimary" variant="body1" align="center">
+              <Typography gutterBottom color="textPrimary" variant="body1" align="center">
                 When you are creating a website that is going to be using dynamic
                 content (or just creating a demo), and you don’t quite have access
                 to what that content is yet…what do you do? You fake it. You put
@@ -99,13 +99,13 @@ export default function Home() {
               </Typography>
             </Grid>
             <Grid item xs={3}>
-              <Typography gutterBottom color="textPrimary" variant="h5"  align="center">
+              <Typography gutterBottom color="textPrimary" variant="h4"  align="center">
                 Get informed!
               </Typography>
               <Typography color="textPrimary" align="center">
                 <AssessmentIcon gutterBottom className={classes.icon} />
               </Typography>
-              <Typography color="textPrimary" variant="body1" align="center">
+              <Typography gutterBottom color="textPrimary" variant="body1" align="center">
                 When you are creating a website that is going to be using dynamic
                 content (or just creating a demo), and you don’t quite have access
                 to what that content is yet…what do you do? You fake it. You put

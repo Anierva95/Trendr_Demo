@@ -64,12 +64,17 @@ export default function ButtonAppBar() {
                 label="Pricing"
                 {...a11yProps(1)}
               ></Tab>
+               <Tab
+                className={classes.Tab}
+                label="Contact"
+                {...a11yProps(2)}
+              ></Tab>
               <Button
               size="large"
               variant="contained"
               color="secondary"
               className={classes.Tab}
-              {...a11yProps(2)}
+              {...a11yProps(3)}
               component={Link}
               to="/demo"
             >
