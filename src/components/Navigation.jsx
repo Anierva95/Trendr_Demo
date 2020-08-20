@@ -9,6 +9,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +37,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" color="default" elevation={0}>
+      <AppBar position="static" color="default" elevation={0}>
         <Grid container direction="row" justify="center">
           <Toolbar justify="center">
             <IconButton
@@ -66,6 +67,8 @@ export default function ButtonAppBar() {
               color="secondary"
               className={classes.Tab}
               {...a11yProps(2)}
+              component={Link}
+              to="/demo"
             >
               Demo
             </Button>
