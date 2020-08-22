@@ -98,6 +98,14 @@ export default function Home() {
                 using “=rand(10,10)” to generate random content, but that doesn’t
                 help me in my code editor. 
               </Typography>
+              <Typography gutterBottom color="textPrimary" variant="body1" align="center">
+                When you are creating a website that is going to be using dynamic
+                content (or just creating a demo), and you don’t quite have access
+                to what that content is yet…what do you do? You fake it. You put
+                in dummy text, and dummy images. Microsoft Word has the feature of
+                using “=rand(10,10)” to generate random content, but that doesn’t
+                help me in my code editor. 
+              </Typography>
             </Grid>
             <Grid className={classes.stepBox} item xs={3}>
               <Typography gutterBottom color="textPrimary" variant="h4"  align="center">
