@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/footer'
+import Nivo_Bar from '../components/nivo_bar'
 
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -32,6 +33,7 @@ const classes = useStyles();
         <h1> Coming Soon! </h1>
         </Typography>
         <div className={classes.EmptySpace}>
+            <Nivo_Bar/>
 
         </div>
         <Footer/>
