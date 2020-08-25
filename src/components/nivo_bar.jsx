@@ -50,7 +50,7 @@ export default function MyResponsiveBar(props) {
                 id: 'lines'
             }
         ]}
-        borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+        borderColor={{ from: 'color', modifiers: [ [ 'brighter', 1.6 ] ] }}
         axisTop={null}
         axisRight={null}
         axisBottom={{
@@ -71,7 +71,7 @@ export default function MyResponsiveBar(props) {
         }}
         labelSkipWidth={12}
         labelSkipHeight={12}
-        labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+        labelTextColor={{ from: 'color', modifiers: [ [ 'brighter', 1.6 ] ] }}
         legends={[
             {
                 dataFrom: 'keys',
