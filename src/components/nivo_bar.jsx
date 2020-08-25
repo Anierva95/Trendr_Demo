@@ -5,10 +5,12 @@ import React from 'react';
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-export default function MyResponsiveBar(data) {
+import data from '../Assets/data.json';
+
+export default function MyResponsiveBar(props) {
     return (
     <ResponsiveBar
-        data={data}
+        data={props.data}
         keys={[ 'hot dog', 'burger', 'sandwich', 'kebab', 'fries', 'donut' ]}
         indexBy="country"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}

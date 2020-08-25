@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/footer'
 import Nivo_Bar from '../components/nivo_bar'
+import data from '../Assets/data.json'
 
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       height: "100vh",
     },
     EmptySpace: {
-        height: "80vh"
+        height: "100vh"
     }
   }));
 
@@ -33,7 +34,7 @@ const classes = useStyles();
         <h1> Coming Soon! </h1>
         </Typography>
         <div className={classes.EmptySpace}>
-            <Nivo_Bar/>
+            <Nivo_Bar data={data} />
 
         </div>
         <Footer/>
