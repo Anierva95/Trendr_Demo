@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/footer'
 import Nivo_Bar from '../components/nivo_bar'
 import data from '../Assets/data.json'
+import Selector from '../components/selector';
 
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -30,12 +31,17 @@ const classes = useStyles();
     return(
         <div className={classes.background}>
             <Navigation/>
+        <Selector/>
+        <Selector/>
+        <Selector/>
+        <Selector/>
+        <Selector/>
+
             <Typography color="textPrimary" align="center" >
         <h1> Coming Soon! </h1>
         </Typography>
         <div className={classes.EmptySpace}>
             <Nivo_Bar data={data} />
-
         </div>
         <Footer/>
 
