@@ -50,7 +50,9 @@ export default function Footer(props) {
           <a href="#">Privacy</a> | <a href="#">Terms</a>
         </Typography>
         <Typography align="center">
+          <a href="https://www.linkedin.com/company/ai-consult/">
           <LinkedInIcon className={classes.footerIcon} />
+          </a>
         </Typography>
       </div>
     </footer>
