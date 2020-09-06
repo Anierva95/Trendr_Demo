@@ -26,22 +26,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Demo(props) {
-  const classes = useStyles();
-  const person = useRef();
-  const timeDelta = useRef();
-  const Aggregration = useRef();
-  const product1 = useRef();
-  const product2 = useRef();
+  const classes = useStyles("");
+  const person = useRef("");
+  const timeDelta = useRef("");
+  const Aggregration = useRef("");
+  const product1 = useRef("");
+  const product2 = useRef("");
 
   return (
     <div className={classes.background}>
       <Navigation />
       <Grid direction="row" justify="center" container>
-        <Selector label="Sales Person" />
-        <Selector label="Time Delta" />
-        <Selector label="Aggregration" />
-        <Selector label="Product1" />
-        <Selector label="Product2" />
+        <Selector ref={person} label="Sales Person" />
+        <Selector ref={timeDelta} label="Time Delta" />
+        <Selector ref={Aggregration} label="Aggregration" />
+        <Selector ref={product1} label="Product1" />
+        <Selector ref={product2} label="Product2" />
       </Grid>
 
       <Typography color="textPrimary" align="center">
