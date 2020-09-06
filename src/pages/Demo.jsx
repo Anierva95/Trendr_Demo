@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/footer";
 import Nivo_Bar from "../components/nivo_bar";
@@ -27,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Demo(props) {
   const classes = useStyles();
+  const person = useRef();
+  const timeDelta = useRef();
+  const Aggregration = useRef();
+  const product1 = useRef();
+  const product2 = useRef();
 
   return (
     <div className={classes.background}>
