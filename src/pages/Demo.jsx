@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     height: "220vh",
   },
   EmptySpace: {
-    height: "170vh",
+    height: "225vh",
   },
   ChartContainer: {
     height: "50vh",
@@ -32,6 +32,18 @@ export default function Demo(props) {
   const Aggregration = useRef("");
   const product1 = useRef("");
   const product2 = useRef("");
+
+  const personMonth = useRef("");
+  const timeDeltaMonth = useRef("");
+  const AggregrationMonth = useRef("");
+  const product1Month = useRef("");
+  const product2Month = useRef("");
+
+  const personWeekly = useRef("");
+  const timeDeltaWeekly = useRef("");
+  const AggregrationWeekly = useRef("");
+  const product1Weekly = useRef("");
+  const product2Weekly = useRef("");
 
   return (
     <div className={classes.background}>
@@ -55,10 +67,24 @@ export default function Demo(props) {
           <Typography color="textPrimary" align="center">
             <h1> Monthly Seasonality </h1>
           </Typography>
+          <Grid direction="row" justify="center" container>
+        <Selector ref={personMonth} label="Sales Person" />
+        <Selector ref={timeDeltaMonth} label="Time Delta" />
+        <Selector ref={AggregrationMonth} label="Aggregration" />
+        <Selector ref={product1Month} label="Product1" />
+        <Selector ref={product2Month} label="Product2" />
+      </Grid>
           <Nivo_Bar data={bardata} />
           <Typography color="textPrimary" align="center">
             <h1> Weekly Seasonality </h1>
           </Typography>
+          <Grid direction="row" justify="center" container>
+        <Selector ref={personWeekly} label="Sales Person" />
+        <Selector ref={timeDeltaWeekly} label="Time Delta" />
+        <Selector ref={AggregrationWeekly} label="Aggregration" />
+        <Selector ref={product1Weekly} label="Product1" />
+        <Selector ref={product2Weekly} label="Product2" />
+      </Grid>
           <Nivo_Bar data={bardata} />
         </div>
       </div>
