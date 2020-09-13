@@ -13,8 +13,8 @@ const MyResponsiveLine = (props) => (
         axisRight={null}
         axisBottom={{
             orient: 'bottom',
-            tickSize: 5,
-            tickPadding: 5,
+            tickSize: 6,
+            tickPadding: 6,
             tickRotation: 0,
             legend: 'transportation',
             legendOffset: 36,
@@ -22,8 +22,8 @@ const MyResponsiveLine = (props) => (
         }}
         axisLeft={{
             orient: 'left',
-            tickSize: 5,
-            tickPadding: 5,
+            tickSize: 4,
+            tickPadding: 4,
             tickRotation: 0,
             legend: 'count',
             legendOffset: -40,
