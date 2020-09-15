@@ -16,13 +16,13 @@ const theme = {
       },
       legend: {
         text: {
-          fill: "#aaaaaa"
+          fill: "#ffffff"
         }
       }
     },
     grid: {
       line: {
-        stroke: "#555555"
+        stroke: "#ffffff"
       }
     }
   };
