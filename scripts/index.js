@@ -23,8 +23,8 @@ con.connect((err) => {
         (err, drop) => { 
    
         var createStatament =  
-        "CREATE TABLE Sales(Name char(50), " + 
-        "Num int, Pedido int, Emissão DATE, Produto char(50), UM char(50), Quantidade int, Vlr_Unit FLOAT, Vlr_Desc FLOAT, Vlr_Frete FLOAT, Vlr_ICMS_ST FLOAT, Vlr_IPI FLOAT, Desp_Aces FLOAT, Vlr_Total FLOAT, Cod_Produto int, Marca char(50), Grupo char(50), Descrição_Linha char(50))"
+        "CREATE TABLE Sales(" + 
+        "Num int, Pedido int, Emissão DATE, Produto varchar(100), UM char(50), Quantidade int, Vlr_Unit FLOAT, Vlr_Desc FLOAT, Vlr_Frete FLOAT, Vlr_ICMS_ST FLOAT, Vlr_IPI FLOAT, Desp_Aces FLOAT, Vlr_Total FLOAT, Cod_Produto char(50), Marca char(50), Grupo char(50), Descrição_Linha char(50))"
    
         con.query(createStatament, (err, drop) => { 
             if (err) 
@@ -46,11 +46,11 @@ csvtojson().fromFile(fileName).then(source => {
             Quantidade = source[i]["Quantidade"],
             Unit = source[i]["Vlr. Unit."],
             Desc = source[i]["Vlr. Desc."],
-            Frete = source[i]["Vlr. Frete"],
-            Icms = source[i]["Vlr. ICMS ST"],
-            Ipi = source[i]["Vlr. IPI"],
+            Frete = source[i]["Vlr_Frete"],
+            Icms = source[i]["Vlr_ICMS_ST"],
+            Ipi = source[i]["Vlr_IPI"],
             Aces = source[i]["Desp. Aces."],
-            total = source[i]["Vlr. Total"],
+            total = source[i]["Vlr_Total"],
             producto2 = source[i]["Cod_Produto"],
             marca = source[i]["Marca"],
             grupo = source[i]["Grupo"],
