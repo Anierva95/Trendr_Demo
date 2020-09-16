@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect} from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/footer";
 import Nivo_Bar from "../components/nivo_bar";
@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
     height: "50vh",
   },
 }));
+
+useEffect(() => {
+  
+})
 
 export default function Demo(props) {
   const classes = useStyles("");
