@@ -5,7 +5,7 @@ const mysql = require("mysql");
 
 const hostname = "localhost", 
     username = "root", 
-    password = "root", 
+    password = "362514331Aa'", 
     databsename = "csvtomysql"
 
 let con = mysql.createConnection({ 
@@ -23,8 +23,8 @@ con.connect((err) => {
         (err, drop) => { 
    
         var createStatament =  
-        "CREATE TABLE sample(Name char(50), " + 
-        "Num int, Pedido int, Emissão DATE, Produto char(50), U.M. char(50), Quantidade int, Vlr. Unit. FLOAT, Vlr. Desc. FLOAT, Vlr. Frete FLOAT, Vlr. ICMS ST FLOAT, Vlr. IPI FLOAT, Desp. Aces. FLOAT, Vlr. Total, Cod_Produto int, Marca char(50), Grupo char(50), Descrição Linha char(50)"
+        "CREATE TABLE Sales(Name char(50), " + 
+        "Num int, Pedido int, Emissão DATE, Produto char(50), UM char(50), Quantidade int, Vlr_Unit FLOAT, Vlr_Desc FLOAT, Vlr_Frete FLOAT, Vlr_ICMS_ST FLOAT, Vlr_IPI FLOAT, Desp_Aces FLOAT, Vlr_Total FLOAT, Cod_Produto int, Marca char(50), Grupo char(50), Descrição_Linha char(50))"
    
         con.query(createStatament, (err, drop) => { 
             if (err) 
@@ -33,25 +33,33 @@ con.connect((err) => {
     }); 
 });
 
-// CSV file name 
-const fileName = "sample.csv"; 
+const fileName = "VitaDerm_Sales.csv"; 
   
 csvtojson().fromFile(fileName).then(source => { 
   
-    // Fetching the data from each row  
-    // and inserting to the table "sample" 
     for (var i = 0; i < source.length; i++) { 
-        var Name = source[i]["Name"], 
-            Email = source[i]["Email"], 
-            Age = source[i]["Age"], 
-            City = source[i]["City"] 
+        var Num = source[i]["Num"], 
+            Pedido = source[i]["Pedido"], 
+            Emissão = source[i]["Emissão"], 
+            Producto = source[i]["Produto"], 
+            um = source[i]["U.M."],
+            Quantidade = source[i]["Quantidade"],
+            Unit = source[i]["Vlr. Unit."],
+            Desc = source[i]["Vlr. Desc."],
+            Frete = source[i]["Vlr. Frete"],
+            Icms = source[i]["Vlr. ICMS ST"],
+            Ipi = source[i]["Vlr. IPI"],
+            Aces = source[i]["Desp. Aces."],
+            total = source[i]["Vlr. Total"],
+            producto2 = source[i]["Cod_Produto"],
+            marca = source[i]["Marca"],
+            grupo = source[i]["Grupo"],
+            line = source[i]["Descrição Linha"]
   
         var insertStatement =  
-        `INSERT INTO sample values(?, ?, ?, ?)`; 
-        var items = [Name, Email, Age, City]; 
-  
-        // Inserting data of current row 
-        // into database 
+        `INSERT INTO Sales values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`; 
+        var items = [Num, Pedido, Emissão, Producto, um, Quantidade, Unit, Desc, Frete, Icms, Ipi, Aces, total, producto2, marca, grupo, line]; 
+
         con.query(insertStatement, items,  
             (err, results, fields) => { 
             if (err) { 
