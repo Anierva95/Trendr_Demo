@@ -24,5 +24,14 @@ export default createMuiTheme({
       textTransform: "none",
       fontSize: "1rem",
     },
+  overrides: {
+    MuiAutocomplete: {
+      option: {
+        '&[data-focus="true"]': {
+          backgroundcolor: 'black',
+        }
+      }
+    }
+  }
   },
 });

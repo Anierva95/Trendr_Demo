@@ -31,13 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Demo(props) {
 
-  useEffect(() => {
-    axios.get("http://localhost:8080/api/sale").then(res => {
-      console.log(res);
-    })
-  })
 
-const [sales, setSales] = useState([]);
 
   const classes = useStyles("");
   const person = useRef("");
@@ -63,10 +57,10 @@ const [sales, setSales] = useState([]);
       <Navigation />
       <Grid direction="row" justify="center" container>
         <Selector ref={person} label="Sales Person" />
-        <Selector ref={timeDelta} label="Time Delta" />
+        {/* <Selector ref={timeDelta} label="Time Delta" />
         <Selector ref={Aggregration} label="Aggregration" />
         <Selector ref={product1} label="Product1" />
-        <Selector ref={product2} label="Product2" />
+        <Selector ref={product2} label="Product2" /> */}
       </Grid>
 
       <Typography color="textPrimary" align="center">
@@ -81,22 +75,22 @@ const [sales, setSales] = useState([]);
             <h1> Monthly Seasonality </h1>
           </Typography>
           <Grid direction="row" justify="center" container>
-        <Selector ref={personMonth} label="Sales Person" />
+        {/* <Selector ref={personMonth} label="Sales Person" />
         <Selector ref={timeDeltaMonth} label="Time Delta" />
         <Selector ref={AggregrationMonth} label="Aggregration" />
         <Selector ref={product1Month} label="Product1" />
-        <Selector ref={product2Month} label="Product2" />
+        <Selector ref={product2Month} label="Product2" /> */}
       </Grid>
           <Nivo_Bar data={bardata} />
           <Typography color="textPrimary" align="center">
             <h1> Weekly Seasonality </h1>
           </Typography>
           <Grid direction="row" justify="center" container>
-        <Selector ref={personWeekly} label="Sales Person" />
+        {/* <Selector ref={personWeekly} label="Sales Person" />
         <Selector ref={timeDeltaWeekly} label="Time Delta" />
         <Selector ref={AggregrationWeekly} label="Aggregration" />
         <Selector ref={product1Weekly} label="Product1" />
-        <Selector ref={product2Weekly} label="Product2" />
+        <Selector ref={product2Weekly} label="Product2" /> */}
       </Grid>
           <Nivo_Bar data={bardata} />
         </div>
