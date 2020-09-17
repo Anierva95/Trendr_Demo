@@ -27,9 +27,24 @@ const theme = {
     }
   };
 
+  const data = [{
+    id: "japan",
+    color: "hsl(356, 70%, 50%)",
+    data:[ 
+    {
+      x: "plane",
+      y: 189
+    },
+    {
+      x: "helicopter",
+      y: 38
+    }
+  ]
+  }]
+
 const MyResponsiveLine = (props) => (
     <ResponsiveLine
-        data={props.data}
+        data={data}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: 'point' }}
         yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}

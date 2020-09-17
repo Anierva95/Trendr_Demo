@@ -31,7 +31,32 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Demo(props) {
 
+  const [sales, setSales] = useState([]);
+  const [selectedProduct1, setSelectedProduct1] = useState();
+  const [selectedProduct2, setSelectedProduct2] = useState();
+  const [selectedProduct3, setSelectedProduct3] = useState();
 
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/sale").then(res => {
+      console.log(res.data);
+      setSales(res.data);
+      setSelectedProduct1(res.data[0]);
+      setSelectedProduct2(res.data[1]);
+      setSelectedProduct3(res.data[2]);
+      
+    })
+  },[]);
+
+  const onSelect1 = (e, value) => {
+    setSelectedProduct1(value);
+  }
+
+  const onSelect2 = (e, value) => {
+    setSelectedProduct2(value);
+  }
+  const onSelect3 = (e, value) => {
+    setSelectedProduct3(value);
+  }
 
   const classes = useStyles("");
   const person = useRef("");
@@ -56,7 +81,10 @@ export default function Demo(props) {
     <div className={classes.background}>
       <Navigation />
       <Grid direction="row" justify="center" container>
-        <Selector ref={person} label="Sales Person" />
+        <Selector onSelect1={onSelect1} sales={sales} ref={person} label="Sales Person" />
+        <Selector onSelect1={onSelect2} sales={sales} ref={person} label="Sales Person" />
+        <Selector onSelect1={onSelect3} sales={sales} ref={person} label="Sales Person" />
+
         {/* <Selector ref={timeDelta} label="Time Delta" />
         <Selector ref={Aggregration} label="Aggregration" />
         <Selector ref={product1} label="Product1" />
