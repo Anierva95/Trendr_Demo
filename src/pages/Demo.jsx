@@ -1,4 +1,5 @@
-import React, { useRef, useEffect} from "react";
+import React, { useRef, useEffect, useState} from "react";
+import axios from 'axios';
 import Navigation from "../components/Navigation";
 import Footer from "../components/footer";
 import Nivo_Bar from "../components/nivo_bar";
@@ -25,11 +26,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-useEffect(() => {
-  
-})
+
+
 
 export default function Demo(props) {
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/sale").then(res => {
+      console.log(res);
+    })
+  })
+
+const [sales, setSales] = useState([]);
+
   const classes = useStyles("");
   const person = useRef("");
   const timeDelta = useRef("");

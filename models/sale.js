@@ -1,9 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var Sale = sequelize.define("Sale", {
-        Num: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         Pedido: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -12,8 +8,8 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.DATE,
             allowNull: false,
         },
-        Producto: {
-            type: DataTypes.STRING, //length 10 and 2 decimal places
+        Produto: {
+            type: DataTypes.STRING, 
             allowNull: false,
         },
         Quantidade: {
@@ -40,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.FLOAT,
             allowNull: false,
         },
-        Deps_Aces: {
+        Desp_Aces: {
             type: DataTypes.FLOAT,
             allowNull: false,
         },
@@ -48,12 +44,12 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.FLOAT,
             allowNull: false,
         },
-        COD_Producto: {
-            type: DataTypes.STIRNG,
+        COD_Produto: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
         Marca: {
-            type: DataTypes.STIRNG,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         Grupo: {

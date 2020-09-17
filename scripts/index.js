@@ -24,7 +24,7 @@ con.connect((err) => {
    
         var createStatament =  
         "CREATE TABLE Sales(" + 
-        "Num int, Pedido int, Emissão DATE, Produto varchar(100), UM char(50), Quantidade int, Vlr_Unit FLOAT, Vlr_Desc FLOAT, Vlr_Frete FLOAT, Vlr_ICMS_ST FLOAT, Vlr_IPI FLOAT, Desp_Aces FLOAT, Vlr_Total FLOAT, Cod_Produto char(50), Marca char(50), Grupo char(50), Descrição_Linha char(50))"
+        "id int, Pedido int, Emissão DATE, Produto varchar(100), UM char(50), Quantidade int, Vlr_Unit FLOAT, Vlr_Desc FLOAT, Vlr_Frete FLOAT, Vlr_ICMS_ST FLOAT, Vlr_IPI FLOAT, Desp_Aces FLOAT, Vlr_Total FLOAT, Cod_Produto char(50), Marca char(50), Grupo char(50), Descrição_Linha char(50))"
    
         con.query(createStatament, (err, drop) => { 
             if (err) 
@@ -38,7 +38,7 @@ const fileName = "VitaDerm_Sales.csv";
 csvtojson().fromFile(fileName).then(source => { 
   
     for (var i = 0; i < source.length; i++) { 
-        var Num = source[i]["Num"], 
+        var id = source[i]["id"], 
             Pedido = source[i]["Pedido"], 
             Emissão = source[i]["Emissão"], 
             Producto = source[i]["Produto"], 
@@ -58,7 +58,7 @@ csvtojson().fromFile(fileName).then(source => {
   
         var insertStatement =  
         `INSERT INTO Sales values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`; 
-        var items = [Num, Pedido, Emissão, Producto, um, Quantidade, Unit, Desc, Frete, Icms, Ipi, Aces, total, producto2, marca, grupo, line]; 
+        var items = [id, Pedido, Emissão, Producto, um, Quantidade, Unit, Desc, Frete, Icms, Ipi, Aces, total, producto2, marca, grupo, line]; 
 
         con.query(insertStatement, items,  
             (err, results, fields) => { 
