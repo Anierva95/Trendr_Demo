@@ -34,6 +34,7 @@ export default function Demo(props) {
 
   const [sales, setSales] = useState([]);
   const [groups, setGroups] = useState([]);
+  const [groupSales, setGroupSales] = useState([]);
   const [selectedProduct1, setSelectedProduct1] = useState();
   const [selectedProduct2, setSelectedProduct2] = useState();
   const [selectedProduct3, setSelectedProduct3] = useState();
@@ -47,6 +48,7 @@ export default function Demo(props) {
       setSelectedProduct1(res.data[0]);
       setSelectedProduct2(res.data[20]);
       setSelectedProduct3(res.data[50]);
+      setSelectedProduct4("PEELINGS");
     })
 
     axios.get("http://localhost:8080/api/uniqueGroup").then(res => {
@@ -66,6 +68,13 @@ export default function Demo(props) {
   }
   const onSelect4 = (e, value) => {
     setSelectedProduct4(value);
+    console.log(sales);
+    console.log(sales[0].Grupo);
+    console.log(selectedProduct4);
+    let groupSales = sales.filter(sale => {
+      return sale.Grupo == selectedProduct4
+    })
+    setGroupSales(groupSales);
   }
 
   const classes = useStyles("");
@@ -92,9 +101,9 @@ export default function Demo(props) {
       <Navigation />
       <button onClick={() => console.log(selectedProduct3)}></button>
       <Grid direction="row" justify="center" container>
-        <Selector onSelect1={onSelect1} sales={sales} ref={person} label="Sales Person" />
-        <Selector onSelect1={onSelect2} sales={sales} ref={person} label="Sales Person" />
-        <Selector onSelect1={onSelect3} sales={sales} ref={person} label="Sales Person" />
+        <Selector onSelect1={onSelect1} sales={sales} ref={person}  />
+        <Selector onSelect1={onSelect2} sales={sales} ref={person} />
+        <Selector onSelect1={onSelect3} sales={sales} ref={person}  />
 
         {/* <Selector ref={timeDelta} label="Time Delta" />
         <Selector ref={Aggregration} label="Aggregration" />
@@ -119,7 +128,7 @@ export default function Demo(props) {
         <Selector ref={AggregrationMonth} label="Aggregration" />
         <Selector ref={product1Month} label="Product1" />
         <Selector ref={product2Month} label="Product2" /> */}
-      <Selector onSelect1={onSelect4} sales={sales} ref={person} label="Sales Person" />
+      <Selector label="Groups" onSelect1={onSelect4} sales={groups} ref={person} />
 
       </Grid>
           <Group_Line />

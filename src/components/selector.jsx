@@ -29,13 +29,13 @@ export default function Selector(props) {
         id="tags-standard"
         options={props.sales}
         onChange={props.onSelect1}
-        getOptionLabel={(sales) => sales.Produto}
+        getOptionLabel={(sales) => sales.Grupo}
         // defaultValue={[sales[0]]}
         renderInput={(params) => (
           <TextField
             {...params}
             variant="standard"
-            label="Products"
+            label={props.label}
             placeholder="Search Products"
           />
         )}
