@@ -68,9 +68,6 @@ export default function Demo(props) {
   }
   const onSelect4 = (e, value) => {
     setSelectedProduct4(value);
-    console.log(sales);
-    console.log(sales[0].Grupo);
-    console.log(selectedProduct4);
     let groupSales = sales.filter(sale => {
       return sale.Grupo == selectedProduct4
     })
@@ -131,7 +128,7 @@ export default function Demo(props) {
       <Selector label="Groups" onSelect1={onSelect4} sales={groups} ref={person} />
 
       </Grid>
-          <Group_Line />
+          <Group_Line item4={selectedProduct4} groupSales={groupSales} />
           <Typography color="textPrimary" align="center">
             <h1> Weekly Seasonality </h1>
           </Typography>

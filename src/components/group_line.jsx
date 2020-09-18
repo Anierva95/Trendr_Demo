@@ -47,46 +47,25 @@ const theme = {
 
 const MyResponsiveLine = (props) => {
     useEffect(() => {
-      if (props.item1 && props.item2 && props.item3) {
+      if (props.item4) {
         setTimeout(() => {
 
-          const createData = (sale1, sale2, sale3) => {
+          const createData = (item4) => {
             return [
               {
-              id: sale1.Produto,
+              id: item4.Grupo,
               color: "hsl(356, 70%, 50%)",
-              data: [
-                {
-                x: sale1.Emissão,
-                y: sale1.VLR_Total
-              }
-                  ]
-            },
-            {
-              id: sale2.Produto,
-              color: "hsl(163, 70%, 50%)",
-              data: [
-                {
-                  x: sale2.Emissão,
-                  y: sale2.VLR_Total
+              data: props.groupSales.map(item => {
+                return {
+                    x: item.Emissão,
+                    y: item.Quantidade
                 }
-              ]
-            },
-            {
-              id: sale3.Produto,
-              color: "hsl(240, 70%, 50%)",
-              data: [
-                {
-                  x: sale3.Emissão,
-                  y: sale3.VLR_Total
-                }
-              ]
+              })
             }
-            
           ]
           }
   
-          data = createData(props.item1, props.item2, props.item3);
+          data = createData(props.item4);
           
         }, 3000);
 
@@ -105,9 +84,10 @@ const MyResponsiveLine = (props) => {
             tickSize: 6,
             tickPadding: 6,
             tickRotation: 0,
-            legend: 'Produto',
+            legend: 'Date',
             legendOffset: 36,
-            legendPosition: 'middle'
+            legendPosition: 'middle',
+            tickValues: "point scale ['A', 'C', 'E', 'G', 'I']"
         }}
         axisLeft={{
             orient: 'left',
