@@ -101,11 +101,6 @@ export default function Demo(props) {
         <Selector onSelect1={onSelect1} sales={sales} ref={person}  />
         <Selector onSelect1={onSelect2} sales={sales} ref={person} />
         <Selector onSelect1={onSelect3} sales={sales} ref={person}  />
-
-        {/* <Selector ref={timeDelta} label="Time Delta" />
-        <Selector ref={Aggregration} label="Aggregration" />
-        <Selector ref={product1} label="Product1" />
-        <Selector ref={product2} label="Product2" /> */}
       </Grid>
 
       <Typography color="textPrimary" align="center">
@@ -120,11 +115,7 @@ export default function Demo(props) {
             <h1> Sales by Product Group </h1>
           </Typography>
           <Grid direction="row" justify="center" container>
-        {/* <Selector ref={personMonth} label="Sales Person" />
-        <Selector ref={timeDeltaMonth} label="Time Delta" />
-        <Selector ref={AggregrationMonth} label="Aggregration" />
-        <Selector ref={product1Month} label="Product1" />
-        <Selector ref={product2Month} label="Product2" /> */}
+
       <Selector label="Groups" onSelect1={onSelect4} sales={groups} ref={person} />
 
       </Grid>
@@ -133,11 +124,7 @@ export default function Demo(props) {
             <h1> Weekly Seasonality </h1>
           </Typography>
           <Grid direction="row" justify="center" container>
-        {/* <Selector ref={personWeekly} label="Sales Person" />
-        <Selector ref={timeDeltaWeekly} label="Time Delta" />
-        <Selector ref={AggregrationWeekly} label="Aggregration" />
-        <Selector ref={product1Weekly} label="Product1" />
-        <Selector ref={product2Weekly} label="Product2" /> */}
+
       </Grid>
           <Nivo_Bar data={bardata} />
         </div>
