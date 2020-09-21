@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Demo(props) {
 
   const [sales, setSales] = useState([]);
+  const [uniqueSales, setUniqueSales] = useState([]);
   const [groups, setGroups] = useState([]);
   const [groupSales, setGroupSales] = useState([]);
   const [selectedProduct1, setSelectedProduct1] = useState();
@@ -69,9 +70,12 @@ export default function Demo(props) {
   const onSelect4 = (e, value) => {
     setSelectedProduct4(value);
     let groupSales = sales.filter(sale => {
-      return sale.Grupo == selectedProduct4
+      return sale.Grupo == selectedProduct4;
     })
-    setGroupSales(groupSales);
+    let sortedSales = groupSales.sort((a , b) => {
+      return new Date(a.Emissão).getTime() - new Date(b.Emissão).getTime();
+    })
+    setGroupSales(sortedSales);
   }
 
   const classes = useStyles("");
@@ -96,7 +100,7 @@ export default function Demo(props) {
   return (
     <div className={classes.background}>
       <Navigation />
-      <button onClick={() => console.log(selectedProduct3)}></button>
+      <button onClick={() => console.log(new Date(sales[0].Emissão))}></button>
       <Grid direction="row" justify="center" container>
         <Selector onSelect1={onSelect1} sales={sales} ref={person}  />
         <Selector onSelect1={onSelect2} sales={sales} ref={person} />

@@ -94,6 +94,10 @@ const MyResponsiveLine = (props) => {
     })
       return(
     <ResponsiveLine
+      xScale={{
+        type: "time",
+        format: "%Y-%m-%d"
+      }}
         data={data}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: 'point' }}

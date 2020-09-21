@@ -73,9 +73,16 @@ const MyResponsiveLine = (props) => {
     })
       return(
     <ResponsiveLine
+        // xScale={{
+        //     type: "time",
+        //     format: "%Y-%m-%d",
+        // }}
+        xScale= {{
+            type: "point",
+        }}
+        // xFormat="time:%Y-%m-%d"
         data={data}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-        xScale={{ type: 'point' }}
         yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
         axisTop={null}
         axisRight={null}
@@ -87,7 +94,7 @@ const MyResponsiveLine = (props) => {
             legend: 'Date',
             legendOffset: 36,
             legendPosition: 'middle',
-            tickValues: "point scale ['A', 'C', 'E', 'G', 'I']"
+            tickValues: "every 1 year"
         }}
         axisLeft={{
             orient: 'left',
