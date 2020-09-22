@@ -80,22 +80,7 @@ export default function Demo(props) {
 
   const classes = useStyles("");
   const person = useRef("");
-  const timeDelta = useRef("");
-  const Aggregration = useRef("");
-  const product1 = useRef("");
-  const product2 = useRef("");
 
-  const personMonth = useRef("");
-  const timeDeltaMonth = useRef("");
-  const AggregrationMonth = useRef("");
-  const product1Month = useRef("");
-  const product2Month = useRef("");
-
-  const personWeekly = useRef("");
-  const timeDeltaWeekly = useRef("");
-  const AggregrationWeekly = useRef("");
-  const product1Weekly = useRef("");
-  const product2Weekly = useRef("");
 
   return (
     <div className={classes.background}>
