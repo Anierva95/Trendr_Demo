@@ -44,7 +44,7 @@ export default function Footer(props) {
         </Typography>
         </Grid>
         <Typography gutterBottom align="center" variant="body1">
-          &#169; 2020 AI Consult All rights reserved.{" "}
+          {/* &#169; 2020 AI Consult All rights reserved.{" "} */}
         </Typography>
         <Typography gutterBottom align="center" variant="body1">
           <a href="#">Privacy</a> | <a href="#">Terms</a>
