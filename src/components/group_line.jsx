@@ -46,31 +46,31 @@ const theme = {
   ,]
 
 const MyResponsiveLine = (props) => {
-    useEffect(() => {
-      if (props.item4) {
-        setTimeout(() => {
+    // useEffect(() => {
+    //   if (props.item4) {
+    //     setTimeout(() => {
 
-          const createData = (item4) => {
-            return [
-              {
-              id: item4.Grupo,
-              color: "hsl(356, 70%, 50%)",
-              data: props.groupSales.map(item => {
-                return {
-                    x: item.Emissão,
-                    y: item.Quantidade
-                }
-              })
-            }
-          ]
-          }
+    //       const createData = (item4) => {
+    //         return [
+    //           {
+    //           id: item4.Grupo,
+    //           color: "hsl(356, 70%, 50%)",
+    //           data: props.groupSales.map(item => {
+    //             return {
+    //                 x: item.Emissão,
+    //                 y: item.Quantidade
+    //             }
+    //           })
+    //         }
+    //       ]
+    //       }
   
-          data = createData(props.item4);
+    //       data = createData(props.item4);
           
-        }, 3000);
+    //     }, 3000);
 
-      }
-    })
+    //   }
+    // })
       return(
     <ResponsiveLine
         // xScale={{
